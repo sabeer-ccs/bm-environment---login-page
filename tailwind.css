@@ -1,0 +1,204 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --1-primitives-colors-base-white: rgba(255, 255, 255, 1);
+  --1-primitives-colors-slate-400: rgba(148, 163, 184, 1);
+  --1-primitives-colors-slate-50: rgba(248, 250, 252, 1);
+  --1-primitives-colors-slate-500: rgba(100, 116, 139, 1);
+  --1-primitives-colors-slate-950: rgba(2, 6, 23, 1);
+  --1-primitives-colors-zinc-400: rgba(161, 161, 170, 1);
+  --1-primitives-colors-zinc-50: rgba(250, 250, 250, 1);
+  --1-primitives-colors-zinc-500: rgba(113, 113, 122, 1);
+  --1-primitives-colors-zinc-950: rgba(9, 9, 11, 1);
+  --2-dimensions-radius-rounded-full: 9999px;
+  --3-shadcn-ui-colors-UI-background: var(--1-primitives-colors-base-white);
+  --3-shadcn-ui-colors-UI-foreground: var(--1-primitives-colors-zinc-950);
+  --3-shadcn-ui-colors-UI-muted-muted-foreground: var(
+    --1-primitives-colors-zinc-500
+  );
+  --BM-learning-colors-background-bgnd-2: rgba(249, 249, 249, 1);
+  --box-shadow-shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --dimensions-border-radius-rounded-full: 9999px;
+  --dimensions-spacing-0-5: 2px;
+  --dimensions-spacing-0-5-duplicate: 2px;
+  --dimensions-spacing-1: 4px;
+  --dimensions-spacing-5: 20px;
+  --padding-px-3: var(--tokens-12);
+  --padding-px-4: var(--tokens-16);
+  --padding-py-1: var(--tokens-4);
+  --padding-py-2: var(--tokens-8);
+  --primitives-colors-red-400: rgba(248, 113, 113, 1);
+  --primitives-colors-red-600: rgba(220, 38, 38, 1);
+  --primitives-dimensions-1-5: 6px;
+  --primitives-dimensions-2: 8px;
+  --semantic-colors-color-text-error: var(--primitives-colors-red-600);
+  --semantic-spacing-spacing-2xs: var(--dimensions-spacing-1);
+  --semantic-spacing-spacing-lg: var(--dimensions-spacing-5);
+  --spacing-radius-radius-button: var(--primitives-dimensions-1-5);
+  --spacing-spacing-spacing-sm: var(--primitives-dimensions-2);
+  --tailwind-primitives-gap-gap-2: 8px;
+  --text-sm-font-medium-font-family: "Inter", Helvetica;
+  --text-sm-font-medium-font-size: 14px;
+  --text-sm-font-medium-font-style: normal;
+  --text-sm-font-medium-font-weight: 500;
+  --text-sm-font-medium-letter-spacing: 0px;
+  --text-sm-font-medium-line-height: 20px;
+  --text-sm-font-semibold-font-family: "Geist", Helvetica;
+  --text-sm-font-semibold-font-size: 14px;
+  --text-sm-font-semibold-font-style: normal;
+  --text-sm-font-semibold-font-weight: 600;
+  --text-sm-font-semibold-letter-spacing: 0px;
+  --text-sm-font-semibold-line-height: 20px;
+  --text-sm-regular-font-family: "Geist", Helvetica;
+  --text-sm-regular-font-size: 14px;
+  --text-sm-regular-font-style: normal;
+  --text-sm-regular-font-weight: 400;
+  --text-sm-regular-letter-spacing: 0px;
+  --text-sm-regular-line-height: 20px;
+  --tokens-12: 12px;
+  --tokens-16: 16px;
+  --tokens-4: 4px;
+  --tokens-8: 8px;
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-3-shadcn-ui-colors-mode="light-zinc">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-3-shadcn-ui-colors-mode="light-zinc"] {
+  --3-shadcn-ui-colors-UI-background: var(--1-primitives-colors-base-white);
+  --3-shadcn-ui-colors-UI-foreground: var(--1-primitives-colors-zinc-950);
+  --3-shadcn-ui-colors-UI-muted-muted-foreground: var(
+    --1-primitives-colors-zinc-500
+  );
+}
+
+[data-3-shadcn-ui-colors-mode="dark-zinc"] {
+  --3-shadcn-ui-colors-UI-background: var(--1-primitives-colors-zinc-950);
+  --3-shadcn-ui-colors-UI-foreground: var(--1-primitives-colors-zinc-50);
+  --3-shadcn-ui-colors-UI-muted-muted-foreground: var(
+    --1-primitives-colors-zinc-400
+  );
+}
+
+[data-3-shadcn-ui-colors-mode="light-slate"] {
+  --3-shadcn-ui-colors-UI-background: var(--1-primitives-colors-base-white);
+  --3-shadcn-ui-colors-UI-foreground: var(--1-primitives-colors-slate-950);
+  --3-shadcn-ui-colors-UI-muted-muted-foreground: var(
+    --1-primitives-colors-slate-500
+  );
+}
+
+[data-3-shadcn-ui-colors-mode="dark-slate"] {
+  --3-shadcn-ui-colors-UI-background: var(--1-primitives-colors-slate-950);
+  --3-shadcn-ui-colors-UI-foreground: var(--1-primitives-colors-slate-50);
+  --3-shadcn-ui-colors-UI-muted-muted-foreground: var(
+    --1-primitives-colors-slate-400
+  );
+}
+
+[data-semantic-colors-mode="light"] {
+  --semantic-colors-color-text-error: var(--primitives-colors-red-600);
+}
+
+[data-semantic-colors-mode="dark"] {
+  --semantic-colors-color-text-error: var(--primitives-colors-red-400);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

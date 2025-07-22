@@ -1,0 +1,1 @@
+export { ActiveInstitutionsSection } from "./ActiveInstitutionsSection";
