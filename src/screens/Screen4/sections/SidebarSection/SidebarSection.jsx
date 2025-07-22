@@ -61,7 +61,7 @@ export const SidebarSection = () => {
   ];
 
   return (
-    <aside className="flex flex-col h-[1145px] w-[260px] justify-between px-3 py-6 border-r border-white bg-[linear-gradient(180deg,rgba(41,50,67,1)_0%,rgba(17,23,34,1)_100%)] backdrop-blur-[22.5px] backdrop-brightness-[100%]">
+    <aside className="flex flex-col h-[745px] w-[260px] justify-between px-3 py-6 border-r border-white bg-[linear-gradient(180deg,rgba(41,50,67,1)_0%,rgba(17,23,34,1)_100%)] backdrop-blur-[22.5px] backdrop-brightness-[100%]">
       <div className="flex flex-col items-start gap-8 w-full">
         <div className="flex flex-col items-start gap-2 w-full">
           <div className="h-8 flex items-center w-full">
